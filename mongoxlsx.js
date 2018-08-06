@@ -1,7 +1,7 @@
 const mongo= require('mongodb').MongoClient;
-
 const XLSX = require('xlsx');
-const archivo = XLSX.readFile('invitacion.xlsx');
+const filename = process.argv[2];
+const archivo = XLSX.readFile(filename);
 const sheet_name_list =archivo.SheetNames;
 
 var url = 'mongodb://localhost:27017';
